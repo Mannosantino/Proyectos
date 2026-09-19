@@ -9,3 +9,7 @@ Colección de proyectos de desarrollo web realizados para clientes y como portfo
 - **Feria Sustentable:** propuesta web sobre consumo responsable y sostenibilidad.
 
 Cada proyecto se encuentra en su propia carpeta con su documentación y archivos necesarios.
+
+## Versiones incorporadas
+
+Las versiones anteriores se conservan en subcarpetas `versiones` dentro de cada proyecto.

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Sembrando Jardinería - Tienda Online</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>Sembrando Jardinería</span>
+                </div>
+                <div class="nav-search">
+                    <input type="text" placeholder="Buscar productos..." id="searchInput">
+                    <button type="button" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="nav-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="contact-btn" id="contactBtn">
+                        <i class="fas fa-phone"></i>
+                        Contacto
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tu Jardín Perfecto a un Click</h1>
+            <p>Productos de jardinería de alta calidad con envío rápido y seguro</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Productos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24h</span>
+                    <span class="stat-label">Envío</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Garantía</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros y Catálogo -->
+    <section class="catalog-section">
+        <div class="container">
+            <!-- Filtros -->
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Categorías</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" value="tierra" checked>
+                            <span>Tierra y Sustratos</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="plantas" checked>
+                            <span>Plantas y Flores</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="semillas" checked>
+                            <span>Semillas</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" value="herramientas" checked>
+                            <span>Herramientas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Precio</h3>
+                    <div class="price-filter">
+                        <input type="range" id="priceRange" min="0" max="200000" value="200000">
+                        <div class="price-labels">
+                            <span>$0</span>
+                            <span id="priceValue">$200.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Ordenar por</h3>
+                    <select id="sortSelect">
+                        <option value="popular">Más Populares</option>
+                        <option value="price-low">Precio: Menor a Mayor</option>
+                        <option value="price-high">Precio: Mayor a Menor</option>
+                        <option value="name">Nombre A-Z</option>
+                    </select>
+                </div>
+
+                <button class="clear-filters" id="clearFilters">
+                    <i class="fas fa-times"></i>
+                    Limpiar Filtros
+                </button>
+            </div>
+
+            <!-- Catálogo de Productos -->
+            <div class="catalog">
+                <div class="catalog-header">
+                    <h2>Nuestros Productos</h2>
+                    <span class="product-count" id="productCount">16 productos</span>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Los productos se cargan dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrito de Compras</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Los items del carrito se cargan dinámicamente -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-coupon">
+                <input type="text" id="couponInput" placeholder="Código de cupón">
+                <button id="applyCouponBtn">Aplicar</button>
+                <span id="couponMessage" style="color:green;font-size:0.9em;"></span>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                <i class="fas fa-credit-card"></i>
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Contacto -->
+    <div class="contact-modal" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Contáctanos</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+54 11 1234-5678</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>ventas@sembrandojardineria.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horarios</h4>
+                        <p>Lun - Sáb: 8:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensaje" rows="4" required></textarea>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

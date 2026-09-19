@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: sans-serif;
+    background: #ABAC68;
+    color: #4a3c31;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container {
+    background-color: #ABAC68; 
+    padding: 20px;
+    margin: 20px 0; 
+    border-radius: 8px; 
+    justify-content: right;
+}
+
+.about-container p {
+    color: #ffff ; 
+    font-size: 1rem; 
+    line-height: 1.5; 
+    justify-content: right;
+}
+
+
+header {
+    background-color: #384C1B;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+header h1 {
+    font-family: italic;
+    font-size: 2rem;
+    color: #ffff;
+    letter-spacing: 2px;
+}
+  
+nav a {
+    color: #ffff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+  
+nav a:hover {
+    color:  #ABAC68;
+}
+  
+.hero {
+    background-color: #ABAC68;
+    padding: 4rem 2rem; 
+    text-align: center;
+    color:  #fff;
+}
+  
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+  
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ffff;
+}
+  
+.product-section {
+    padding: 3rem 2rem;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+  
+.product-section h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #ffff;
+}
+  
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 2rem;
+}
+  
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+  
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+  
+.product-image {
+    height: 180px;
+    overflow: hidden;
+}
+  
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.product-info {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.product-info h4 {
+    color: #6b4423;
+    margin-bottom: 0.5rem;
+}
+  
+.product-info p {
+    flex-grow: 1;
+    color: #7a5a3b;
+    font-size: 0.9rem;
+}
+  
+.about-section {
+    background-color: #ABAC68;
+    padding: 3rem 2rem;
+    color: #e8c1a0;
+    max-width: 900px;
+    margin: 3rem auto;
+    border-radius: 12px;
+    text-align: center;
+}
+  
+.about-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffff;
+}
+  
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #5a452c;
+}
+  
+footer {
+    text-align: left;
+    padding: 1rem 2rem;
+    background-color: #384C1B;
+    color: #fff;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color:#384C1B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+  
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+.containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+}
+  
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+  
+.socialSvg {
+    width: 17px;
+}
+  
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+  
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+  
+@keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+  
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .product-section h3 {
+        font-size: 1.5rem;
+    }
+    .about-section h3 {
+        font-size: 1.5rem;
+    }
+}

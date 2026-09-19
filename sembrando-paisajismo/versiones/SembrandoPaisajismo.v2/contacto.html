@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>Sembrando Jardinería</span>
+                </div>
+                <div class="nav-actions">
+                    <a href="index.html" class="back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver a la Tienda
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte con todas tus necesidades de jardinería</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Información de Contacto -->
+                <div class="contact-info-card">
+                    <h2>Información de Contacto</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Teléfono</h3>
+                            <p>+54 11 1234-5678</p>
+                            <span class="contact-subtitle">Lun - Sáb: 8:00 - 18:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>ventas@sembrandojardineria.com</p>
+                            <span class="contact-subtitle">Respuesta en 24 horas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Dirección</h3>
+                            <p>Av. Jardín 1234, Buenos Aires</p>
+                            <span class="contact-subtitle">Showroom abierto al público</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horarios</h3>
+                            <p>Lunes - Sábado: 8:00 - 18:00</p>
+                            <span class="contact-subtitle">Domingos cerrado</span>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h3>Seguinos</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="contact-form-card">
+                    <h2>Envíanos un Mensaje</h2>
+                    <p class="form-subtitle">Completa el formulario y te responderemos lo antes posible</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="asunto">Asunto *</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="producto">Información de Producto</option>
+                                <option value="pedido">Estado de Pedido</option>
+                                <option value="devolucion">Devolución o Cambio</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>¿Cuánto tiempo tarda el envío?</h3>
+                    <p>Los envíos estándar tardan entre 24-48 horas en Buenos Aires y 3-5 días hábiles para el resto del país.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Aceptan devoluciones?</h3>
+                    <p>Sí, aceptamos devoluciones hasta 30 días después de la compra, siempre que el producto esté en su empaque original.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Tienen garantía en los productos?</h3>
+                    <p>Todos nuestros productos tienen garantía de fábrica. Las plantas tienen garantía de 30 días.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>¿Puedo retirar en el local?</h3>
+                    <p>Sí, ofrecemos retiro en nuestro showroom sin cargo adicional. Solo selecciona "Retiro en local" al finalizar tu compra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+            <div class="contact-modal-header">
+                <h3 id="modalTitle">¡Mensaje Preparado!</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="contact-modal-body">
+                <div class="modal-icon success">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <p id="modalMessage">Tu mensaje ha sido preparado. En unos segundos se abrirá WhatsApp para que puedas enviarlo directamente a nuestro equipo.</p>
+            </div>
+            <div class="contact-modal-footer">
+                <button class="modal-btn">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sembrando Jardinería</h3>
+                    <p>Tu tienda de confianza para todos los productos de jardinería. Calidad y servicio desde 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>+54 11 1234-5678</p>
+                    <p>ventas@sembrandojardineria.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sembrando Jardinería. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
